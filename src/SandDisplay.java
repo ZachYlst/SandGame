@@ -60,7 +60,7 @@ public class SandDisplay extends JComponent implements MouseListener,
     
     buttons[tool].setSelected(true);
    
-    slider = new JSlider(JSlider.HORIZONTAL, 0, 100, 50);
+    slider = new JSlider(JSlider.HORIZONTAL, 0, 50, 25);
     slider.addChangeListener(this);
     slider.setMajorTickSpacing(5);
     slider.setPaintTicks(true);
@@ -112,6 +112,7 @@ public class SandDisplay extends JComponent implements MouseListener,
   
   public void mouseClicked(MouseEvent e)
   {
+	  
   }
   
   public void mousePressed(MouseEvent e)
@@ -126,14 +127,17 @@ public class SandDisplay extends JComponent implements MouseListener,
   
   public void mouseEntered(MouseEvent e)
   {
+	  
   }
   
   public void mouseExited(MouseEvent e)
   {
+	  
   }
   
   public void mouseMoved(MouseEvent e)
   {
+	  
   }
   
   public void mouseDragged(MouseEvent e)
@@ -177,6 +181,6 @@ public class SandDisplay extends JComponent implements MouseListener,
   //speed of 100 returns 10^6
   private int computeSpeed(int sliderValue)
   {
-    return (int)Math.pow(10, 0.05 * sliderValue + 3);
+    return (int)Math.pow(10, 0.03 * sliderValue + 1.5);
   }
 }
